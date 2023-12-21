@@ -7,6 +7,7 @@ Small demo of simple trading system based on Springboot.
 
 - 用户管理模块
 - 股票信息模块
+- 交易模块
 
 
 
@@ -16,10 +17,21 @@ Small demo of simple trading system based on Springboot.
 
 1. users
    - user_id: 用户编号，数据库自动生成，主键
+   
    - username：用户名，不可重复
+   
    - email：用户邮箱，不可重复
+   
    - active：是否启用，用于逻辑删除（禁用）用户
+   
    - update_at：最后更新时间戳，数据库自动生成
+   
+   - reserved_text： 可变长度的字符串字段，用于存储任何额外的文本信息。
+   
+   - reserved_number：数值字段，用于存储任何其他数值。
+   
+     
+   
 2. stocks
    - stock_name：股票名称，主键
    - stock_symbol：股票代码
@@ -29,12 +41,14 @@ Small demo of simple trading system based on Springboot.
    - market_cap：市值
    - 52_week_high：52周最高价
    - 52_week_low：52周最低价
+   - reserved_text： 可变长度的字符串字段，用于存储任何额外的文本信息。
+   - reserved_number：数值字段，用于存储任何其他数值。
 
 
 
 ### API设计
 
-#### 1.用户api
+#### 1.用户功能
 
 ##### - 用户登录（/users/login）
 

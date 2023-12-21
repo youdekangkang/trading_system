@@ -31,3 +31,12 @@ INSERT INTO stocks (stock_name, stock_symbol, current_price, pe_ratio, volume, m
 ('Microsoft Corporation', 'MSFT', 280.00, 30.00, 1500000, 1800000000, 300.00, 250.00),
 ('Amazon.com', 'AMZN', 3100.00, 70.00, 500000, 2500000000, 3500.00, 2800.00),
 ('Tesla, Inc.', 'TSLA', 700.00, 100.00, 2000000, 800000000, 900.00, 400.00);
+
+
+ALTER TABLE users
+ADD COLUMN reserved_text VARCHAR(255),
+ADD COLUMN reserved_number DECIMAL(10, 2);
+
+ALTER TABLE stocks
+ADD COLUMN reserved_text VARCHAR(255),
+ADD COLUMN reserved_number DECIMAL(10, 2);
