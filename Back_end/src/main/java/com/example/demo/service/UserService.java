@@ -68,12 +68,10 @@ public class UserService {
                     return new ApiResponse(true, "User disabled successfully.");
                 }).orElse(new ApiResponse(false, "User not found."));
     }
-
-
+    
     // 查找用户
     public User getUserById(Long id) {
         return userRepository.findById(id).orElse(null);
     }
-
 
 }
