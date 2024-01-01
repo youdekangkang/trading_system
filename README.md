@@ -97,7 +97,9 @@ Small demo of simple trading system based on Springboot.
    5. **reserved_text**: 可变长度的字符串字段，用于存储任何额外的文本信息。
    6. **reserved_number**: 数值字段，用于存储任何其他数值。
 
-
+6. Roles：存储用户name以及对应的角色
+   1. **roles**:用户角色（管理员，客户）
+   2. **username**:用户name
 
 ### API设计
 
