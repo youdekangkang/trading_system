@@ -31,7 +31,8 @@ public class User {
 
     // 预留字段
     private String reservedText;
-    private BigDecimal reservedNumber;
+    //将预留字段用来表示账户余额
+    private BigDecimal accountBalance;
 
     // 在设置密码时进行加密
     public void setPassword(String password) {

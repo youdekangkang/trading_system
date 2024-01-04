@@ -80,6 +80,22 @@ CREATE TABLE trade_history (
     FOREIGN KEY (stock_symbol) REFERENCES stocks(stock_symbol)
 );
 
+-- 创建 roles 表
+CREATE TABLE roles (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL UNIQUE
+);
+
+-- 创建 user_roles 表来存储用户和角色之间的关系
+CREATE TABLE user_roles (
+    user_id INT NOT NULL,
+    role_id INT NOT NULL,
+    PRIMARY KEY (user_id, role_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (role_id) REFERENCES roles(id)
+);
+
+
 
 SHOW ENGINE INNODB STATUS;
 
